@@ -1,0 +1,26 @@
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+
+
+const App= () => {
+  return (
+ <>
+  <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+                <Home  />
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+  {/* <Navbar/>
+  <CardWithForm/> */}
+  </>
+  );
+};
+
+export default App;
